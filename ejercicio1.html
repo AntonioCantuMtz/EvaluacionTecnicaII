@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css">
+        <title>Evaluación tecnica 2</title>
+    </head>
+    <body>
+        <h1>Asi se resolvía el ejercicio</h1>
+        <table width="80%">
+            <tr>
+                <td>
+                    <p>
+                        Con esta linea de codigo se resolvia el ejercicio.<br><br>
+                        <code>
+                            array2cop = JSON.parse(JSON.stringify(array1));
+                        </code>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <h3>Explicación</h3>
+        <table width="80%">
+            <tr>
+                <td colspan="2">
+                    <p>
+                        Ya en serio, esto si que requiere una explicación.<br><br>
+                        Haber lo que entendí es que debido a que (por así decirlo) al momento de pasarle a array2cop todo <br>
+                        el contenido de array1 array2cop esta como ligado a array1, es decir, que si cambias (como en este <br>
+                        caso) un valor de array1 este tambien se ve reflejado en array2cop y la idea es que eso no pase de <br>
+                        manera que array2cop sea un arreglo que funcione de manera totalmente independiente de array1<br> 
+                        y la manera que encontré de arreglar esto es utilizando la siguiente linea de código: <br><br>
+                        <code>
+                            array2cop = JSON.parse(JSON.stringify(array1));
+                        </code>
+                        <br><br>JSON.stringify() nos sirve para pasar un objeto a una cadena de caracteres, es decir, un string y<br>
+                        JSON.parse() nos sirve para hacer un casteo, es decir, pasar un tipo de dato a otro, en este caso<br>
+                        de tipo string a un objeto (esto debido a la manera en que esta declarado el contenido de array1) y<br>
+                        con eso ya le quitamos esa dependencia que tiene array2cop de array1 de manera que ya funciona<br>
+                        como un objeto diferente y con esto SI aplicamos cambios a array1 ya no se ven reflejados en<br>
+                        array2cop. 
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Si esto que explique no tiene sentido pues... lo hizo un mago. 
+                    </p> 
+                </td>
+                <td>
+                    <img src="img/32161132.jpg" alt="Meme de los Simpson" width="150px" height="150px">
+                </td>
+            </tr>
+        </table>
+        <script src="js/script.js"></script>
+    </body>
+</html>
